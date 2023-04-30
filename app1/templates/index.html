@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    <h1>index page</h1>
+    <span> Request method - {{request_method}}</span>
+
+    <form method="POST" action="/"> 
+        <!-- action is to send our form data to the backend whatever it may be, in flask it was ImmutableMultiDict([(), (), ....]) -->
+        <input type="text" placeholder="first name" name="first_name">
+        <!-- giving name to the forms was obvious as if there is no key then there cant be a value in the dict -->
+        <input type="text" placeholder="last name" name="last_name">
+        <input type="submit">
+    </form>
+{% endblock content %}

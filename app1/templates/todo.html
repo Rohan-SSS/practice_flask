@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="/todo" method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.content }}
+        {{ form.submit }}
+    </form>
+    <!-- action='/todo' is used to post the data to the backend and hidden tag is something related to the secret key -->
+{% endblock content %}
